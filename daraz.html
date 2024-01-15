@@ -1,0 +1,1536 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hello, world!</title>
+  </head>
+  <style>
+    body{
+      background-color: #F5F5F5;
+      font-family: Roboto-Regular,'Helvetica Neue',Helvetica,Tahoma,Arial,Sans-serif;;
+      
+    }
+
+    .navbar {
+        font-family: Roboto-Regular,'Helvetica Neue',Helvetica,Tahoma,Arial,Sans-serif;;
+    }
+    .btn:hover {
+        background-color: #DF4D05;
+        border-radius: 8px;
+    }
+    .search{
+       position: relative;
+       box-shadow: 0 0 40px rgba(51, 51, 51, .1); 
+       }
+    .search .fa-search{
+
+        position: absolute;
+        top: 20px;
+        left: 16px;
+
+    }
+    .form-control{
+      width: 105%;
+      padding: 13px 19px;
+      font-family: Roboto-Regular,Helvetica,sans-serif;
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: 0;
+      color: #212121;
+    }
+    .sidebar ul li:hover{
+      color: #F85606;
+      background-color: #F5F5F5;
+      width: 200px;
+      border-radius: 10px;
+    }
+    .sidebar ul li img:hover{
+      background-color: #F5F5F5;
+    }
+
+    .search .search-icon{
+
+        position: absolute;
+        top: 6px;
+        left: 702px;
+        height: 33px;
+        width: 55px;
+        background: #FFE1D2;
+        border-radius: 20px;
+        cursor: pointer;
+
+       }
+       li{
+        list-style-type: none;
+        font-family:'Roboto', sans-serif;
+        font-size: 14px;
+        line-height: 27px;
+        color: #757575;
+        cursor: pointer;
+       }
+       .li-icon {
+        margin-right: 15px;
+        margin-left: -30px;
+        width: 16px;
+      }
+      .carousel-indicators [data-bs-target] {
+
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        cursor: context-menu;
+
+      }
+      .banerhover div:hover{
+        cursor: context-menu;
+        background-color: #FFE8DE;
+      }
+      .borderline {
+                display: flex;
+                border-left: 1.5px #E5E5E5 solid;
+                height: 45px;
+                margin-left: 10px;
+                margin-top: 40px;
+                padding-left: 10px;
+      }
+
+      ul#channelcontainer li{
+        color: black;
+      }
+
+      ul#channelcontainer li:hover{
+        color: #DF4D05;
+      }
+
+      div.catogery ul li{
+        color: black;
+      }
+      div.catogery:hover{
+        box-shadow: 10px #DF4D05;
+      }
+      #treatments li:hover {
+        height: 162px;
+        width: 147px;
+        display: block;
+        float: left;
+        -moz-box-shadow: 1px 1px 3px #DADADA;
+        -webkit-box-shadow: 1px 1px 3px #DADADA;
+        box-shadow: 1px 1px 3px #DADADA;
+        behavior: url(/scipts/PIE.php);
+    }
+    #footer a{
+
+      color: #000;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    #footer a:hover{
+
+      text-decoration: underline;
+    }
+
+    .countryancor a{
+      cursor: pointer;
+    }
+    .topcatogerylink{
+      color: #333;
+      font-weight: 300;
+      font-size: 12px;
+      text-decoration: none;
+      margin: 0;
+      height: 15px;
+      line-height: 15px;
+      margin-left: 30px;
+    }
+    .topcatogerylink:hover{
+      text-decoration: underline;
+      color: #333;
+    }
+    .topcatogerylinksmall a{
+
+      height: 15px;
+      line-height: 15px;
+      display: inline-block;
+      font-size: 12px;
+      color: #888;
+      text-decoration: none;
+    }
+    .topcatogerylinksmall a:hover{
+      text-decoration: underline;
+    }
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
+  right: 0px;
+  top: 55px;
+  width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+  </style>
+  <body>
+    
+    <div class="container-fluid"> 
+            <div class="row">
+                <nav class="navbar navbar-light fixed-top" style="background-color: #F85606;">
+                  <div class="col-1">
+                      <a class="navbar-brand" href="#">
+                          <img src="daraz logo.PNG" alt="" width="140" height="50" style="padding-left: 20px;">
+                        </a>
+                  </div>
+                  <div class="col-7">
+                      <div class="search">
+                          <input type="text" class="form-control" placeholder="Search in Daraz" style="border-radius: 12px;">
+                          <img class="search-icon" src="search.png"></img>
+                          
+                        </div>    
+                  </div>
+                  <div class="col-3">
+                    <button class="btn" style="color: white; font-size: 13px; padding: 10px;"><img src="user.png" width="25px" 
+                      style="padding-right: 5px; padding-bottom: 3px;"><strong>Login</strong></button>
+                    <span style="font-size: 12px; color: white;">|</span>
+                    <button class="btn" style="color: white; font-size: 13px; padding: 10px;"><strong>Sign Up</strong></button>
+                    <div class="dropdown">
+                      <button class="btn" style="color: white; font-size: 13px; padding: 10px;"><img src="UK.png" width="25px" 
+                        style="padding-right: 5px; padding-bottom: 3px;"><strong>EN</strong><span style="padding-left: 4px;">⌄</span></button>
+                      <div class="dropdown-content" style="font-weight: 300; color: #545454!important;;">
+                        <p>Select language</p>
+                        <input type="radio">
+                        <label for="html">UR/urdu</label><br>
+                        <input type="radio">
+                        <label for="html">EN/English</label><br>
+                      </div>
+                    </div>
+
+                    <button class="btn" style="color: white; font-size: 13px; padding: 10px;"><img src="shopping-cart.png" 
+                      width="35px" style="padding-right: 5px; padding-bottom: 3px;"></button>
+                  </div>
+                </nav>
+            </div>
+    </div>
+    <div class="container-fluid" style="padding-top: 75px;">
+      <div class="row"  style="padding: 10px 10px 10px 30px;">
+        <div class="col-3 sidebar" style="background-color: #FFFFFF; border-radius: 15px; border: 2px solid #EBEBEB; width: 250px;">
+          <ul>
+            <li>
+              <img src="Groceries.png" class="li-icon">
+              <a>Groceries & Pets</a>
+            </li>
+            <li>
+              <img src="Groceries.png" class="li-icon">
+              <a>Health & Beauty</a>
+            </li>
+            <li>
+              <img src="Groceries.png" class="li-icon">
+              <a>Men's Fashion</a>
+            </li>
+            <li>
+              <img src="Groceries.png" class="li-icon">
+              <a>Women's Fashion</a>
+            </li>
+            <li>
+              <img src="Groceries.png" class="li-icon">
+              <a>Mother & Baby</a>
+            </li>
+            <li>
+              <img src="Groceries.png" class="li-icon">
+              <a>Home & Lifestyle</a>
+            </li>
+            <li>
+              <img src="Groceries.png" class="li-icon">
+              <a>Electronic Devices</a>
+            </li>
+            <li>
+              <img src="Groceries.png" class="li-icon">
+              <a>Electronic Accessories</a>
+            </li>
+            <li>
+              <img src="Groceries.png" class="li-icon">
+              <a>TV & Home Appliances</a>
+            </li>
+            <li>
+              <img src="Groceries.png" class="li-icon">
+              <a>Sports & Outdoor</a>
+            </li>
+            <li>
+              <img src="Groceries.png" class="li-icon">
+              <a>Watches, Bags & Jewellery</a>
+            </li>
+            <li>
+              <img src="Groceries.png" class="li-icon">
+              <a>Automotives & Moterbikes</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col-9" style=" width: 950px; height: 343px;" >
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+            </div>
+            <div class="carousel-inner" style="cursor: pointer;">
+              <div class="carousel-item active">
+                <img src="Slide1.jpg" class="d-block w-100" alt="..." style=" border-radius: 10px;">
+              </div>
+              <div class="carousel-item">
+                <img src="slide2.jpg" class="d-block w-100" alt="..." style=" border-radius: 10px;">
+              </div>
+              <div class="carousel-item">
+                <img src="slide3.jpg" class="d-block w-100" alt="..." style=" border-radius: 10px;">
+              </div>
+              <div class="carousel-item">
+                <img src="slide4.jpg" class="d-block w-100" alt="..." style=" border-radius: 10px;">
+              </div>
+              <div class="carousel-item">
+                <img src="slide5.jpg" class="d-block w-100" alt="..." style=" border-radius: 10px;">
+              </div>
+              <div class="carousel-item">
+                <img src="slide6.jpg" class="d-block w-100" alt="..." style=" border-radius: 10px;">
+              </div>
+              <div class="carousel-item">
+                <img src="slide7.jpg" class="d-block w-100" alt="..." style=" border-radius: 10px;">
+              </div>
+              <div class="carousel-item">
+                <img src="slide8.jpg" class="d-block w-100" alt="..." style=" border-radius: 10px;">
+              </div>
+              <div class="carousel-item">
+                <img src="slide9.jpeg" class="d-block w-100" alt="..." style=" border-radius: 10px;">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="padding-top: 10px;">
+      <div class="row">
+        <div class="col-12">
+          <img src="banner.PNG" width="100%">
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row banerhover">
+        <div class="col-12" style="background-color: #fff1eb; border-radius: 10px; padding: 10px; margin-left: 30px; width: 94%;">
+          <img src="safepayment.png" >
+          <span style="padding-left: 1px;"> Safe Payments</span>
+          <span style="font-size: 14px; padding-left: 5px; padding-right: 10px; color:#757575;">|</span>
+          <img src="nationwide.png">
+          <span style="padding-left: 1px;"> Nationwide Delivery</span>
+          <span style="font-size: 14px; padding-left: 5px; padding-right: 10px; color:#757575;">|</span>
+          <img src="freeandeasyreturn.png">
+          <span style="padding-left: 1px;"> Free & Easy Returns</span>
+          <span style="font-size: 14px; padding-left: 5px; padding-right: 10px; color:#757575;">|</span>
+          <img src="bestprice.png">
+          <span style="padding-left: 1px;"> Best Price Guaranteed</span>
+          <span style="font-size: 14px; padding-left: 5px; padding-right: 10px; color:#757575;">|</span>
+          <img src="auth.png">
+          <span style="padding-left: 1px;"> 100% Authentic Products</span>
+          <span style="font-size: 14px; padding-left: 5px; padding-right: 10px; color:#757575;">|</span>
+          <img src="darazverified.png">
+          <span style="padding-left: 1px;"> Daraz Verified</span>
+          
+        
+      </div>
+    </div>
+    </div>
+    <div class="container-fluid" style="padding-top: 20px;">
+      <div class="row" style="padding-left: 30px;">
+        <div class="col-12" style="background-color: #FFFFFF; border-radius: 10px; width: 96%; border: 1px solid #EBEBEB;">
+          <ul style="display: inline; padding: 0; padding-top: 10px;" id="channelcontainer">
+            <li style="float: left; list-style: outside none none;">
+              <a>
+                <img src="imagecontainer1.png" width="109px" style="display: flex; padding: 10px;">
+                <span style="display: flex; padding-left: 39px;">Mart</span>
+              </a>
+            <li style="float: left; list-style: outside none none;">
+              <span class="borderline"></span>
+            </li>  
+            </li>
+            <li style="float: left; list-style: outside none none;">
+              <a>
+                <img src="imagecontainer2.png" width="109px" style="display: flex; padding: 10px;">
+                <span style="display: flex; padding-left: 33px;">Fashion</span>
+              </a>
+            <li style="float: left; list-style: outside none none;">
+              <span class="borderline"></span>
+            </li>  
+            </li>
+            <li style="float: left; list-style: outside none none;">
+              <a>
+                <img src="imagecontainer3.png" width="109px" style="display: flex; padding: 10px;">
+                <span style="display: flex; padding-left: 33px;">Beauty</span>
+              </a>
+            <li style="float: left; list-style: outside none none;">
+              <span class="borderline"></span>
+            </li>  
+            </li>
+            <li style="float: left; list-style: outside none none;">
+              <a>
+                <img src="imagecontainer4.png" width="109px" style="display: flex; padding: 10px;">
+                <span style="display: flex; padding-left: 10px;">Home & Decor</span>
+              </a>
+            <li style="float: left; list-style: outside none none;">
+              <span class="borderline"></span>
+            </li>  
+            </li>
+            <li style="float: left; list-style: outside none none;">
+              <a>
+                <img src="imagecontainer5.png" width="109px" style="display: flex; padding: 10px;">
+                <span style="display: flex; padding-left: 15px;">Free Delivery</span>
+              </a>
+            <li style="float: left; list-style: outside none none;">
+              <span class="borderline"></span>
+            </li>  
+            </li>
+            <li style="float: left; list-style: outside none none;">
+              <a>
+                <img src="imagecontainer6.png" width="109px" style="display: flex; padding: 10px;">
+                <span style="display: flex; padding-left: 14px; text-align: center; line-height: 20px;">Everyday Low <br> Price</span>
+              </a>
+            <li style="float: left; list-style: outside none none;">
+              <span class="borderline"></span>
+            </li>  
+            </li>
+            <li style="float: left; list-style: outside none none;">
+              <a>
+                <img src="imagecontainer7.png" width="109px" style="display: flex; padding: 10px;">
+                <span style="display: flex; padding-left: 8px;">Daraz Like New</span>
+              </a>
+            <li style="float: left; list-style: outside none none;">
+              <span class="borderline"></span>
+            </li>  
+            </li>
+            <li style="float: left; list-style: outside none none;">
+              <a>
+                <img src="imagecontainer8.png" width="109px" style="display: flex; padding: 10px;">
+                <span style="display: flex; padding-left: 12px;">New on Daraz</span>
+              </a>
+            <li style="float: left; list-style: outside none none;">
+              <span class="borderline"></span>
+            </li>  
+            </li>
+            <li style="float: left; list-style: outside none none;">
+              <a>
+                <img src="imagecontainer9.png" width="109px" style="display: flex; padding: 10px;">
+                <span style="display: flex; padding-left: 24px;">Flash Sale</span>
+              </a>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+    <div class="container-fluid catogery" style="padding-top: 30px; padding-left: 45px;">
+      <div class="row">
+        <span style="padding-left: 0; font-size: 22px; color: #424242;">Categories</span>
+      </div>
+      <div class="row" style=" background-color: #FFFFFF; width: 98%;" id="treatments">
+        <div class="col-3" style="padding: 0;" >  
+            <ul style="display: inline; padding: 0; padding-top: 10px;" >
+              <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+                <a>
+                  <img src="catogery1.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px ; margin: 15px;">
+                  <span style="display: flex; padding-left: 39px;">Mart</span>
+                </a>
+              </li>
+              <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+                <a>
+                  <img src="catogery2.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px; margin: 15px;">
+                  <span style="display: flex; padding-left: 27px;">Shampoo</span>
+                </a>
+              </li>
+            </ul>
+        </div>
+        <div class="col-3" style="padding: 0;">  
+          <ul style="display: inline; padding: 0; padding-top: 10px;">
+            <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+              <a>
+                <img src="catogery3.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px ; margin: 15px;">
+                <span style="display: flex; padding-left: 39px;">Headphones</span>
+              </a>
+            </li>
+            <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+              <a>
+                <img src="catogery4.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px; margin: 15px;">
+                <span style="display: flex; padding-left: 27px;">Wardrobe</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3" style="padding: 0;">  
+        <ul style="display: inline; padding: 0; padding-top: 10px;">
+          <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+            <a>
+              <img src="catogery5.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px ; margin: 15px;">
+              <span style="display: flex; padding-left: 39px;">Black Coffee</span>
+            </a>
+          </li>
+          <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+            <a>
+              <img src="catogery6.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px; margin: 15px;">
+              <span style="display: flex; padding-left: 27px;">Moisturizers</span>
+            </a>
+          </li>
+        </ul>
+        </div>
+        <div class="col-3" style="padding: 0;">  
+      <ul style="display: inline; padding: 0; padding-top: 10px;">
+        <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+          <a>
+            <img src="catogery7.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px ; margin: 15px;">
+            <span style="display: flex; padding-left: 39px;">Noodles</span>
+          </a>
+        </li>
+        <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none; border-right: none;">
+          <a>
+            <img src="catogery8.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px; margin: 15px;">
+            <span style="display: flex; padding-left: 27px;">Potatoes</span>
+          </a>
+        </li>
+      </ul>
+        </div>
+      </div>
+      <div class="row" style=" background-color: #FFFFFF; width: 98%;" id="treatments">
+        <div class="col-3" style="padding: 0;">  
+            <ul style="display: inline; padding: 0; padding-top: 10px;">
+              <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+                <a>
+                  <img src="catogery9.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px ; margin: 15px;">
+                  <span style="display: flex; padding-left: 30px;">Smart Watches</span>
+                </a>
+              </li>
+              <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+                <a>
+                  <img src="catogery10.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px; margin: 15px;">
+                  <span style="display: flex; padding-left: 27px;">Wall Decor</span>
+                </a>
+              </li>
+            </ul>
+        </div>
+        <div class="col-3" style="padding: 0;">  
+          <ul style="display: inline; padding: 0; padding-top: 10px;">
+            <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+              <a>
+                <img src="catogery11.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px ; margin: 15px;">
+                <span style="display: flex; padding-left: 39px;">Socks</span>
+              </a>
+            </li>
+            <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+              <a>
+                <img src="catogery12.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px; margin: 15px;">
+                <span style="display: flex; padding-left: 10px;">Spine Supporters</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3" style="padding: 0;">  
+        <ul style="display: inline; padding: 0; padding-top: 10px;">
+          <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+            <a>
+              <img src="catogery13.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px ; margin: 15px;">
+              <span style="display: flex; padding-left: 39px;">Rings</span>
+            </a>
+          </li>
+          <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+            <a>
+              <img src="catogery14.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px; margin: 15px;">
+              <span style="display: flex; padding-left: 10px;">Shoes Accessories</span>
+            </a>
+          </li>
+        </ul>
+        </div>
+        <div class="col-3" style="padding: 0;">  
+      <ul style="display: inline; padding: 0; padding-top: 10px;">
+        <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none;">
+          <a>
+            <img src="catogery15.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px ; margin: 15px;">
+            <span style="display: flex; padding-left: 5px;">Tapes & Dispansers</span>
+          </a>
+        </li>
+        <li style="padding: 8px; float: left; list-style: outside none none; border: 1px solid #E5E5E5; border-top: none; border-left: none; border-right: none;">
+          <a>
+            <img src="catogery16.jpg" width="100px" style="display: flex; padding: 10px 20px 10px 10px; margin: 15px;">
+            <span style="display: flex; padding-left: 27px;">Todler Milk</span>
+          </a>
+        </li>
+      </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="container" style="padding-top: 40px;">
+      <div class="col-12" style="padding-left: 350px;">
+        <button style="font-weight:600 ; padding: 10px 0 10px 0; padding-left: 160px; padding-right: 160px;  border: 1px solid #f85606; color: #f85606; font-size: 14px;" type="button">LOAD MORE</button>
+
+      </div>
+
+    </div>
+    <div class="container-fluid" style="padding-top: 40px; font-family: Roboto-Regular,'Helvetica Neue',Helvetica,Tahoma,Arial,Sans-serif; margin-left: 28px; width: 96%;">
+      <div class="row" id="footer">
+        <div class="col-3">
+          <div style="color: #f85606; font-size: 20px; font-weight: 400;">
+            Customer Care
+          </div>
+          <div style="padding-top: 10px;">
+            <a href="#">Help Center</a><br>
+            <a href="#">How to Buy</a><br>
+            <a href="#">Corporate & Bulk Purchasing</a><br>
+            <a href="#">Returns & Refunds</a><br>
+            <a href="#">Daraz Shop</a><br>
+            <a href="#">Contact Us</a><br>
+            <a href="#">Purchase Protection</a><br>
+            <a href="#">Daraz Pick up Points</a><br>
+          </div>
+          <div style="padding-top: 30px; color: #f85606; font-size: 20px; font-weight: 400;">
+            Make Money With Us
+          </div>
+          <div style="padding-top: 10px;">
+            <a href="#">Daraz University</a><br>
+            <a href="#">Sell on Daraz</a><br>
+            <a href="#">Join Daraz Affiliate Program</a><br>
+          </div>
+        </div>
+        <div class="col-3">
+          <div style="color: #f85606; font-size: 20px; font-weight: 400;">
+            Daraz
+          </div>
+          <div style="padding-top: 10px;">
+            <a href="#">About Us</a><br>
+            <a href="#">Digital Payments</a><br>
+            <a href="#">Daraz Donates</a><br>
+            <a href="#">Daraz Blog</a><br>
+            <a href="#">Terms & Conditions</a><br>
+            <a href="#">Privacy Policy</a><br>
+            <a href="#">NTN Number : 4012118-6</a><br>
+            <a href="#">STRN Number : 1700401211818s</a><br>
+            <a href="#">Online Shopping App</a><br>
+            <a href="#">Online Grocery Shopping</a><br>
+            <a href="#">Daraz Exclusive</a><br>
+
+
+          </div>
+        </div>
+        <div class="col-3">
+          <div  style="color: #f85606; font-size: 20px; font-weight: 400;">
+            Daraz International
+          </div>
+          <div class="row">
+            <div class="col-12 countryancor" style="padding-top: 10px; float: left;">
+              <a href="#">
+                    <img style="border-radius: 50%;" src="pakistan.PNG" width="35px">
+                    <span>Pakistan</span>
+              </a>
+              <a href="#">
+                <img style="border-radius: 50%; padding-left: 5px;" src="bangladesh.PNG" width="35px">
+                <span>Bangladesh</span>
+              </a>
+            </div>
+            <div class="col-12 countryancor" style="padding-top: 10px; float: left;">
+              <a href="#">
+                    <img style="border-radius: 50%;" src="sirilanka.PNG" width="35px">
+                    <span>Sirilanka</span>
+              </a>
+              <a href="#">
+                <img style="border-radius: 50%; padding-left: 5px;" src="mayanmer.PNG" width="35px">
+                <span>Mayanmer</span>
+              </a>
+            </div>
+            <div class="col-12 countryancor" style="padding-top: 10px; float: left;">
+              <a href="#">
+                    <img style="border-radius: 50%;" src="nepal.PNG" width="35px">
+                    <span>Nepal</span>
+              </a>
+              
+            </div>
+          </div>
+          <div style="color: #f85606; font-size: 20px; font-weight: 400; padding-top: 20px;">
+            Payment Methods
+          </div>
+          <div class="row">
+            <div class="col-12" style="padding-top: 10px;">
+              <img src="cashondelivery.PNG" width="50px" style="border-radius: 3px; border: 1px solid #E7E7E7;">
+              <img src="visa.PNG" width="50px" style="border-radius: 3px; border: 1px solid #E7E7E7;">
+              <img src="mastercard.PNG" width="50px" style="border-radius: 3px; border: 1px solid #E7E7E7;">
+              <img src="easypaisa.PNG" width="50px" style="border-radius: 3px; border: 1px solid #E7E7E7;">
+            </div>
+            <div class="col-12" style="padding-top: 5px;">
+              <img src="darazwallet.PNG" width="50px" style="border-radius: 3px; border: 1px solid #E7E7E7;">
+              <img src="jazzcash.PNG" width="50px" style="border-radius: 3px; border: 1px solid #E7E7E7;">
+              <img src="unionpay.PNG" width="50px" style="border-radius: 3px; border: 1px solid #E7E7E7;">
+              <img src="hbl.PNG" width="50px" style="border-radius: 3px; border: 1px solid #E7E7E7;">
+            </div>
+            <div class="col-12" style="padding-top: 5px;">
+              <img src="easyinstallments.PNG" width="50px" style="border-radius: 3px; border: 1px solid #E7E7E7;">
+            </div>
+          </div>
+          <div style="color: #f85606; font-size: 20px; font-weight: 400; padding-top: 20px;">
+            Verified by
+          </div>
+          <div class="row">
+            <div class="col-12" style="padding-top: 10px;">
+              <img src="pci.PNG" width="75px" style="border-radius: 3px;">
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div style="color: #f85606; font-size: 20px; font-weight: 400;">
+            Exclusive Deals and Offers!
+          </div>
+          <div class="row" style="padding-top: 10px;">
+            <div class="col-4">
+              <img src="Qr.PNG" width="100px" style="border-radius: 10px;">
+            </div>
+            <div class="col-8">
+              <a href="#">
+                <img src="appstore.PNG" width="110px" style="padding-left: 10px; margin-left: 10px; ">
+              </a>
+              <a href="#">
+                <img src="playstore.PNG" width="110px" style="padding-left: 10px; margin-left: 10px; padding-top: 5px; ">
+              </a>
+              <a href="#">
+                <img src="appgallery.PNG" width="110px" style="padding-left: 10px; margin-left: 10px; padding-top: 5px;">
+              </a>
+            </div>
+          </div>
+          <div class="row" style="padding-top: 35px;">
+            <div class="col-12">
+              <img src="happyshopping.PNG" width="250px">
+            </div>
+          </div>
+          <div style="color: #f85606; font-size: 20px; font-weight: 400; padding-top: 40px;">
+            Follow Us
+          </div>
+          <div class="row" style="padding-top: 20px;">
+            <div class="col-2">
+              <a href="#">
+                <img src="facebook.PNG" width="30px">
+              </a>
+            </div>
+            <div class="col-2">
+              <a href="#">
+                <img src="twitter.PNG" width="30px">
+              </a> 
+            </div>
+            <div class="col-2">
+              <a href="#">
+                <img src="Instagram.PNG" width="30px">
+              </a>
+            </div>
+            <div class="col-2">
+              <a href="#">
+                <img src="Youtube.PNG" width="30px">
+              </a>
+            </div>
+            <div class="col-2">
+              <a href="#">
+                <img src="browser.PNG" width="30px">
+              </a>
+            </div>
+                  
+               
+                  
+              
+                  
+           
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" style="background-color: #F1F1F1; margin-top: 30px; padding-bottom: 30px;">
+      <div class="row" style="color: #606060;;">
+        <div class="col-3">
+          <h1 style="font-size: 18px; font-weight: 400; margin: 20px 0 0 30px">
+            How Daraz Transformed Online Shopping in Pakistan
+          </h1>
+          <p style="color: #888; font-size: 10px; line-height: 16px; margin: 20px 0 0 30px">
+            Daraz first made waves in Pakistan’s e-commerce market after its introduction in 2012. 
+            We have since grown to become Pakistan’s largest platform for online shopping with a network
+             spread across Asia in Pakistan, Bangladesh, Sri Lanka, Myanmar, and Daraz.com.np. Our vision 
+             was to provide a safe, efficient online marketplace platform for vendors and customers across 
+             the country to come together. We started off exclusively as an online fashion retail platform 
+             and over the years expanded to become a complete one-stop solution for all your buying needs.
+              Daraz prides itself on not being just another ecommerce venture in Asia. We work tirelessly 
+              to make sure that we provide users with the best online online shopping experience and value 
+              for their purchases. Whether you shop online through our website or our online shopping mobile
+               App, you can expect easy navigation, 
+            customized recommendations, and a smooth online shopping experience guaranteed.
+          </p>
+          <h1 style="font-size: 14px; font-weight: 400; margin: 20px 0 0 30px; line-height: 20px;">
+            What Makes Us Different from Other Online Shopping Platforms?
+          </h1>
+          <p style="color: #888; font-size: 10px; line-height: 16px; margin: 20px 0 0 30px">
+            <b style="font-weight: 600;">Select from the Largest Online Marketplace in Pakistan</b><br>
+            With over 15 million products to select from, Daraz offers its customers the most comprehensive 
+            listing of products in the country. 
+            Whether you’re looking for electronics, apparel, appliances, or groceries – there is something for everyone.
+          </p>
+          <p style="color: #888; font-size: 10px; line-height: 16px; margin: 20px 0 0 30px">
+            <b style="font-weight: 600;">Hassle Free Delivery</b><br>
+            Online shopping is only as good as its execution and Daraz promises hassle 
+            free delivery right from the moment you order to when your package is dropped 
+            at your door. We cater to both major and smaller cities alike, and give you the choice
+             to track your package as it makes its way to you so you always know your order status.
+              If you are unsatisfied with 
+            any aspect of your order, we have a simple 7-day return or exchange policy.
+          </p>
+          <p style="color: #888; font-size: 10px; line-height: 16px; margin: 20px 0 0 30px">
+            <b style="font-weight: 600;">Payment Options to Suit Every Style</b><br>
+            You can choose to pay through a credit/debit card, opt for cash on delivery
+             or even go for EMI (easy monthly instalments). You can also avail exclusive
+             offers by downloading Daraz Wallet – a closed loop digital wallet
+          </p>
+        </div>
+        <div class="col-3">
+          <p style="color: #888; font-size: 10px; line-height: 16px; margin: 20px 0 0 30px">
+            that offers you a secure, easy way to make payments. We also have 
+            easypaisa & jazzcash payment method for our customers' ease
+          </p>
+          <p style="color: #888; font-size: 10px; line-height: 16px; margin: 20px 0 0 30px">
+            <b style="font-weight: 600;">Shop from Verified Vendors</b><br>
+            Daraz understands that online shopping in Pakistan comes with its fair share of risks. 
+            This is why with Daraz Marketplace and Daraz Mall customers have the security of choosing 
+            from verified vendors and brands from Karachi, Lahore, Islamabad and all across Pakistan. Now you’ll never
+             have to second guess authenticity because Daraz makes sure to do it for you!
+          </p>
+          <p style="color: #888; font-size: 10px; line-height: 16px; margin: 20px 0 0 30px">
+            <b style="font-weight: 600;">Shop Around the World with Daraz Global Collection</b><br>
+            International sellers and local convenience come together with Daraz Global collection.
+             Get the chance to shop online from vendors around the world without leaving the Daraz website.
+              Featuring thousands of novelty gadgets and accessories, Daraz Global Collection offers you a selection of 
+            products that you won’t find anywhere else when you’re online shopping in Pakistan.
+          </p>
+          <p style="color: #888; font-size: 10px; line-height: 16px; margin: 20px 0 0 30px">
+            <b style="font-weight: 600;">Avail Exclusive Discounts, Offers, and Promotions</b><br>
+            Online shopping with Daraz means you get the chance to avail exclusive online-only
+             promotional packages as well as discount vouchers from our vendors when you shop from 
+             their pages. Our flash sales give you customized product offers all curated with the help of
+             our advanced AI technology so you always have deals you’ll actually be interested in!
+          </p>
+          <p style="color: #888; font-size: 10px; line-height: 16px; margin: 20px 0 0 30px">
+            <b style="font-weight: 600;">Buy Value, not Just Goods with Daraz Care</b><br>
+            Daraz does not just cater online shopping in Pakistan but also aims to simplify
+             the way you give back to society. With charities spanning across sectors of education,
+              health care, environmental preservation, 
+            and shelters, you can choose to make a big difference with a few, simple clicks.
+          </p>
+          <p style="color: #888; font-size: 10px; line-height: 16px; margin: 20px 0 0 30px">
+            <b style="font-weight: 600;">Simplify Corporate Purchases</b><br>
+            Who says corporate purchases need to be a complicated affair? When you opt for Daraz
+             Corporate, you get an efficient and transparent solution for your business’ bulk 
+             purchasing needs. We’re proud to be working with some of the most 
+            prestigious organizations in Pakistan across a number of different industries.
+          </p>
+        </div>
+        <div class="col-3 ">
+          <h1 style="font-size: 18px; font-weight: 400; margin: 20px 0 10px 30px" >
+            Top Categories & Brands
+          </h1>
+
+            <a href="#" class="topcatogerylink">
+              MOBILE PHONES IN PAKISTAN
+            </a>
+
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              Apple iPhones,
+            </a>
+            <a href="#">
+              Honor Mobiles,
+            </a>
+            <a href="#">
+              Huawei Mobiles,
+            </a>
+            <a href="#">
+              Techno Mobiles,
+            </a>
+            <a href="#">
+              Redmi Mobiles,
+            </a>
+            <a href="#">
+              Xiaomi Mi Mobiles,
+            </a>
+            <a href="#">
+              Nokia Mobiles,
+            </a>
+            <a href="#">
+              OnePlus Mobiles,
+            </a>
+            <a href="#">
+              Oppo Mobile Phones,
+            </a>
+            <a href="#">
+              Realme Mobiles,
+            </a>
+            <a href="#">
+              Samsung Mobile Phones,
+            </a>
+            <a href="#">
+              Vivo Mobile Phones,
+            </a>
+            <a href="#">
+              Mobile Accessories,
+            </a>
+            <a href="#">
+              Smart Watches
+            </a>
+          </h4>
+          <a href="#" class="topcatogerylink">
+            LATEST LAPTOPS
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              Dell Laptops,
+            </a>
+            <a href="#">
+              HP Laptops,
+            </a>
+            <a href="#">
+              Lenovo Laptops,
+            </a>
+            <a href="#">
+              Mouse,
+            </a>
+            <a href="#">
+              Gaming Graphic Cards,
+            </a>
+            <a href="#">
+              lenovo ideapad 3,
+            </a>
+            <a href="#">
+              Macbook Pro 13,
+            </a>
+            <a href="#">
+              Hp probook 650 G2,
+            </a>
+          </h4>
+          <a href="#" class="topcatogerylink">
+            LED TV
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              Changhong Led Tv,
+            </a>
+            <a href="#">
+              LG Led Tv,
+            </a>
+            <a href="#">
+              Samsung Led Tv,
+            </a>
+            <a href="#">
+              Sony Led Tv,
+            </a>
+            <a href="#">
+              Gaming Graphic Cards,
+            </a>
+            <a href="#">
+              TCL LED TVs,
+            </a>
+          </h4>
+          <a href="#" class="topcatogerylink">
+            HOME APPLIANCES
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              Microwave oven,
+            </a>
+            <a href="#">
+              Geyser,
+            </a>
+            <a href="#">
+              Heater,
+            </a>
+            <a href="#">
+              Refrigerators,
+            </a>
+            <a href="#">
+              Deep Freezers, 
+            </a>
+            <a href="#">
+              Generators,
+            </a>
+            <a href="#">
+              Water Dispensers,
+            </a>
+            <a href="#">
+              Fans,
+            </a>
+            <a href="#">
+              Room Cooler,
+            </a>
+            <a href="#">
+              Table Fans,   
+            </a>
+            <a href="#">
+              Wall Fans, 
+            </a>
+            <a href="#">
+              Exhaust Fans,
+            </a>
+            <a href="#">
+              Pedestal Fans,
+            </a>
+            <a href="#">
+              Window Ac,
+            </a>
+            <a href="#">
+              Solar Panel,
+            </a>
+            <a href="#">
+              Washing Machine
+            </a>
+          </h4>
+          <a href="#" class="topcatogerylink">
+            DSLR CAMERAS
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              Camera Tripods,       
+            </a>
+            <a href="#">
+              Drones,
+            </a>
+            <a href="#">
+              IP & CCTV Cameras,
+            </a>
+            <a href="#">
+              Nikon D7000,Mouse,
+            </a>
+            <a href="#">
+              Nikon D5600,
+            </a>
+            <a href="#">
+              Canon 200D,
+            </a>
+            <a href="#">
+              Canon 1200D,
+            </a>
+            <a href="#">
+              Fujifilm Instax Mini 11,
+            </a>
+            <a href="#">
+              Canon M50
+            </a>
+          </h4>
+          <a href="#" class="topcatogerylink">
+            HEALTH & BEAUTY
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              sunisa foundation,         
+            </a>
+            <a href="#">
+              Biofad, 
+            </a>
+            <a href="#">
+              janssen facial kit,
+            </a>
+            <a href="#">
+              Glutathione Injection,
+            </a>
+            <a href="#">
+              Glutathione Cream Sauvage,
+            </a>
+            <a href="#">
+              Glutathione Tablets,
+            </a>
+            <a href="#">
+              Glutathione Soap,
+            </a>
+            <a href="#">
+              N95 Mask  
+            </a>
+          </h4>
+          <a href="#" class="topcatogerylink">
+            TRENDING
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              Apple iPhones,
+            </a>
+            <a href="#">
+              Honor Mobiles,
+            </a>
+            <a href="#">
+              Huawei Mobiles,
+            </a>
+            <a href="#">
+              Techno Mobiles,
+            </a>
+            <a href="#">
+              Redmi Mobiles,
+            </a>
+            <a href="#">
+              Xiaomi Mi Mobiles,
+            </a>
+            <a href="#">
+              Nokia Mobiles,
+            </a>
+            <a href="#">
+              OnePlus Mobiles,
+            </a>
+            <a href="#">
+              Oppo Mobile Phones,
+            </a>
+            <a href="#">
+              Realme Mobiles,
+            </a>
+            <a href="#">
+              Samsung Mobile Phones,
+            </a>
+            <a href="#">
+              Vivo Mobile Phones,
+            </a>
+            <a href="#">
+              Mobile Accessories,
+            </a>
+            <a href="#">
+              Smart Watches
+            </a>
+            <a href="#">
+              Apple iPhones,
+            </a>
+            <a href="#">
+              Honor Mobiles,
+            </a>
+            <a href="#">
+              Huawei Mobiles,
+            </a>
+            <a href="#">
+              Techno Mobiles,
+            </a>
+            <a href="#">
+              Redmi Mobiles,
+            </a>
+            <a href="#">
+              Xiaomi Mi Mobiles,
+            </a>
+            <a href="#">
+              Nokia Mobiles,
+            </a>
+            <a href="#">
+              OnePlus Mobiles,
+            </a>
+            <a href="#">
+              Oppo Mobile Phones,
+            </a>
+            <a href="#">
+              Realme Mobiles,
+            </a>
+            <a href="#">
+              Samsung Mobile Phones,
+            </a>
+            <a href="#">
+              Vivo Mobile Phones,
+            </a>
+            <a href="#">
+              Mobile Accessories,
+            </a>
+            <a href="#">
+              Smart Watches
+            </a>
+          </h4>
+        </div>
+        <div class="col-3" style="margin-top: 20px;">
+          <a href="#" class="topcatogerylink">
+            WOMEN'S FASHION
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              Dell Laptops,
+            </a>
+            <a href="#">
+              HP Laptops,
+            </a>
+            <a href="#">
+              Lenovo Laptops,
+            </a>
+            <a href="#">
+              Mouse,
+            </a>
+            <a href="#">
+              Gaming Graphic Cards,
+            </a>
+            <a href="#">
+              lenovo ideapad 3,
+            </a>
+            <a href="#">
+              Macbook Pro 13,
+            </a>
+            <a href="#">
+              Hp probook 650 G2,
+            </a>
+          </h4>
+          <a href="#" class="topcatogerylink">
+            MEN'S FASHION
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              Dell Laptops,
+            </a>
+            <a href="#">
+              HP Laptops,
+            </a>
+            <a href="#">
+              Lenovo Laptops,
+            </a>
+          </h4>
+          <a href="#" class="topcatogerylink">
+            ONLINE GROCERY STORE
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              Changhong Led Tv,
+            </a>
+            <a href="#">
+              LG Led Tv,
+            </a>
+            <a href="#">
+              Samsung Led Tv,
+            </a>
+            <a href="#">
+              Sony Led Tv,
+            </a>
+            <a href="#">
+              Gaming Graphic Cards,
+            </a>
+            <a href="#">
+              TCL LED TVs,
+            </a>
+          </h4>
+          <a href="#" class="topcatogerylink">
+            ONLINE BOOK STORE
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              Microwave oven,
+            </a>
+            <a href="#">
+              Geyser,
+            </a>
+            <a href="#">
+              Heater,
+            </a>
+            <a href="#">
+              Refrigerators,
+            </a>
+            <a href="#">
+              Deep Freezers, 
+            </a>
+            <a href="#">
+              Generators,
+            </a>
+            <a href="#">
+              Water Dispensers,
+            </a>
+            <a href="#">
+              Fans,
+            </a>
+            <a href="#">
+              Room Cooler,
+            </a>
+            <a href="#">
+              Table Fans,   
+            </a>
+            <a href="#">
+              Wall Fans, 
+            </a>
+            <a href="#">
+              Exhaust Fans,
+            </a>
+            <a href="#">
+              Pedestal Fans,
+            </a>
+            <a href="#">
+              Window Ac,
+            </a>
+            <a href="#">
+              Solar Panel,
+            </a>
+            <a href="#">
+              Washing Machine
+            </a>
+          </h4>
+          <a href="#" class="topcatogerylink">
+            USED CARS FOR SALE
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              sunisa foundation,         
+            </a>
+            <a href="#">
+              Biofad, 
+            </a>
+            <a href="#">
+              janssen facial kit,
+            </a>
+            <a href="#">
+              Glutathione Injection,
+            </a>
+            <a href="#">
+              Glutathione Cream Sauvage,
+            </a>
+            <a href="#">
+              Glutathione Tablets,
+            </a>
+            <a href="#">
+              Glutathione Soap,
+            </a>
+            <a href="#">
+              Glutathione Cream Sauvage,
+            </a>
+            <a href="#">
+              Glutathione Tablets,
+            </a>
+            <a href="#">
+              Glutathione Soap,
+            </a>
+            <a href="#">
+              N95 Mask  
+            </a>
+          </h4>
+          <a href="#" class="topcatogerylink">
+            AIR CONDITIONERS
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              Changhong Led Tv,
+            </a>
+            <a href="#">
+              LG Led Tv,
+            </a>
+            <a href="#">
+              Samsung Led Tv,
+            </a>
+            <a href="#">
+              Sony Led Tv,
+            </a>
+            <a href="#">
+              Gaming Graphic Cards,
+            </a>
+            <a href="#">
+              TCL LED TVs,
+            </a>
+          </h4>
+          <a href="#" class="topcatogerylink">
+            TOP MOBILE PHONES
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              Apple iPhones,
+            </a>
+            <a href="#">
+              Honor Mobiles,
+            </a>
+            <a href="#">
+              Huawei Mobiles,
+            </a>
+            <a href="#">
+              Techno Mobiles,
+            </a>
+            <a href="#">
+              Redmi Mobiles,
+            </a>
+            <a href="#">
+              Xiaomi Mi Mobiles,
+            </a>
+            <a href="#">
+              Nokia Mobiles,
+            </a>
+            <a href="#">
+              OnePlus Mobiles,
+            </a>
+            <a href="#">
+              Oppo Mobile Phones,
+            </a>
+            <a href="#">
+              Realme Mobiles,
+            </a>
+            <a href="#">
+              Samsung Mobile Phones,
+            </a>
+            <a href="#">
+              Vivo Mobile Phones,
+            </a>
+            <a href="#">
+              Mobile Accessories,
+            </a>
+            <a href="#">
+              Smart Watches
+            </a>
+            <a href="#">
+              Apple iPhones,
+            </a>
+            <a href="#">
+              Honor Mobiles,
+            </a>
+            <a href="#">
+              Huawei Mobiles,
+            </a>
+            <a href="#">
+              Techno Mobiles,
+            </a>
+            <a href="#">
+              Redmi Mobiles,
+            </a>
+            <a href="#">
+              Xiaomi Mi Mobiles,
+            </a>
+            <a href="#">
+              Nokia Mobiles,
+            </a>
+            <a href="#">
+              OnePlus Mobiles,
+            </a>
+            <a href="#">
+              Oppo Mobile Phones,
+            </a>
+            <a href="#">
+              Realme Mobiles,
+            </a>
+            <a href="#">
+              Samsung Mobile Phones,
+            </a>
+            <a href="#">
+              Vivo Mobile Phones,
+            </a>
+            <a href="#">
+              Mobile Accessories,
+            </a>
+            <a href="#">
+              Smart Watches
+            </a>
+            <a href="#">
+              Apple iPhones,
+            </a>
+            <a href="#">
+              Honor Mobiles,
+            </a>
+            <a href="#">
+              Huawei Mobiles,
+            </a>
+            <a href="#">
+              Techno Mobiles,
+            </a>
+            <a href="#">
+              Redmi Mobiles,
+            </a>
+            <a href="#">
+              Xiaomi Mi Mobiles,
+            </a>
+            <a href="#">
+              Nokia Mobiles,
+            </a>
+            <a href="#">
+              OnePlus Mobiles,
+            </a>
+            <a href="#">
+              Oppo Mobile Phones,
+            </a>
+            <a href="#">
+              Realme Mobiles,
+            </a>
+            <a href="#">
+              Samsung Mobile Phones,
+            </a>
+            <a href="#">
+              Vivo Mobile Phones,
+            </a>
+            <a href="#">
+              Mobile Accessories,
+            </a>
+            <a href="#">
+              Smart Watches
+            </a>
+          </h4>
+          <a href="#" class="topcatogerylink">
+            MEDICINE
+          </a>
+          <h4 class="topcatogerylinksmall" style="padding-left: 30px; line-height: 0%;">
+            <a href="#">
+              sunisa foundation,         
+            </a>
+            <a href="#">
+              Biofad, 
+            </a>
+            <a href="#">
+              janssen facial kit,
+            </a>
+            <a href="#">
+              Glutathione Injection,
+            </a>
+            <a href="#">
+              Glutathione Cream Sauvage,
+            </a>
+            <a href="#">
+              Glutathione Tablets,
+            </a>
+            <a href="#">
+              Glutathione Soap,
+            </a>
+            <a href="#">
+              N95 Mask  
+            </a>
+          </h4>
+        </div>
+      </div>
+    </div>
+    
+
+      
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
